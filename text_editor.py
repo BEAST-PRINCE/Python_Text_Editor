@@ -111,7 +111,6 @@ def paste(e):
         position = text.index(tk.INSERT)
         text.insert(position,selected_text)
 
-
 # Bold Text
 def bold():
     bold_font = font.Font(text,text.cget('font'))
@@ -156,7 +155,6 @@ def text_color():
         else:
             text.tag_add('colored',"sel.first","sel.last")
 
-
 # Color All Text
 def all_text_color():
     selected_color = colorchooser.askcolor()[1]
@@ -171,8 +169,6 @@ def bg_color():
 
     if selected_color:
         text.config(background=selected_color)
-
-
 
 
 # Main Frame
@@ -196,7 +192,6 @@ color_button.grid(row=0, column=2)
 text_scroll_up = tk.Scrollbar(main_frame)
 text_scroll_up.pack(side="right",fill='y')
 
-
 text_scroll_side = tk.Scrollbar(main_frame,orient= "horizontal")
 text_scroll_side.pack(side="bottom",fill='x')
 
@@ -204,11 +199,8 @@ text_scroll_side.pack(side="bottom",fill='x')
 text=tk.Text(main_frame,width=110, font= ("Times", 18), selectbackground="blue", selectforeground="white",xscrollcommand=text_scroll_side.set, undo=True, yscrollcommand=text_scroll_up.set,wrap="none")
 text.pack(fill='both')
 
-
 text_scroll_up.config(command=text.yview)
 text_scroll_side.config(command=text.xview)
-
-
 
 
 # Menu Bar
@@ -240,7 +232,6 @@ color_menu.add_command(label="Background",command=bg_color)
 
 
 # Status Bar
-
 status_bar=tk.Label(root, text="Ready         ", anchor=tk.E)
 status_bar.pack(fill=tk.X,side=tk.BOTTOM,ipady=20)
 
