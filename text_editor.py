@@ -13,6 +13,7 @@ selected_text=None
 root = tk.Tk()
 root.title("TEXT EDITOR")
 root.geometry("1360x740")
+root.resizable(width=False, height=False)
 
 
 # New File
